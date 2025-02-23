@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Return False Example</title>
+</head>
+<body>
+  <a href="https://example.com" id="myLink">Go to Example.com</a>
+
+  <script>
+    document.getElementById('myLink').onclick = function (event) {
+      alert('Link clicked, but navigation is prevented.');
+      return false; // Prevent default action and stop propagation
+    };
+  </script>
+</body>
+</html>

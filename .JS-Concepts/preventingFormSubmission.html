@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Return False Example</title>
+</head>
+<body>
+  <form id="myForm">
+    <input type="text" placeholder="Enter something">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('myForm').onsubmit = function (event) {
+      alert('Form submission prevented.');
+      return false; // Prevent form submission and stop propagation
+    };
+  </script>
+</body>
+</html>

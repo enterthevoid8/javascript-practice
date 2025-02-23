@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOMContentLoaded vs Load</title>
+</head>
+<body>
+  <h1>Page Lifecycle Events</h1>
+  <img src="https://via.placeholder.com/300" alt="Example Image">
+
+  <script>
+    // DOMContentLoaded event
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOMContentLoaded: The DOM is fully loaded and parsed.');
+      // You can safely manipulate DOM elements here
+      document.body.style.backgroundColor = '#f0f8ff';
+    });
+
+    // Load event
+    window.addEventListener('load', () => {
+      console.log('Load: The entire page and all resources are loaded.');
+      // Actions that depend on images, styles, or other external resources
+      const img = document.querySelector('img');
+      img.style.border = '5px solid green';
+    });
+  </script>
+</body>
+</html>

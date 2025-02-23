@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Example</title>
+    <style>
+        /* Basic CSS Reset */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic Selectors and Properties */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Container Styles */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Typography */
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        /* Box Model */
+        .box {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid #333;
+            background-color: #fff;
+        }
+
+        /* Flexbox */
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+            }
+        }
+
+        /* Transitions */
+        .box:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes slide {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .animated-box {
+            animation: slide 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CSS Example</h1>
+        <p>This is a basic example covering some key CSS concepts.</p>
+
+        <!-- Box Model -->
+        <div class="box">Box Model</div>
+
+        <!-- Flexbox -->
+        <div class="flex-container">
+            <div class="box">Flexbox</div>
+            <div class="box">Flexbox</div>
+            <div class="box">Flexbox</div>
+        </div>
+
+        <!-- Responsive Design -->
+        <div class="box animated-box">Responsive Design</div>
+
+    </div>
+
+</body>
+</html>

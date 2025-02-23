@@ -1,0 +1,21 @@
+
+<div>
+  <button class="child">Hello</button>
+</div>
+
+<script>
+  const parent = document.querySelector("div");
+  const child = document.querySelector(".child");
+
+  parent.addEventListener("click",
+    function () {
+      console.log("Parent");
+    }
+  );
+
+  child.addEventListener("click", function () {
+    console.log("Child");
+  });
+</script>
+// Child
+// Parent

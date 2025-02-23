@@ -1,0 +1,18 @@
+<!-- HTML (from https://example.com) -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Same-Origin Policy Demo</title>
+</head>
+<body>
+  <h1>Same-Origin Policy Demo</h1>
+  <script>
+    // Attempt to make a cross-origin request
+    fetch('https://another.com/api/data')
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error('Error:', error));
+  </script>
+</body>
+</html>
+<!-- Access to fetch at 'https://another.com/api/data' from origin 'https://example.com' has been blocked by CORS policy. -->

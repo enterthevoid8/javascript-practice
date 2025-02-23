@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Form Example</title>
+  <style>
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select, textarea {
+      margin-bottom: 12px;
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>HTML Form Example</h2>
+
+  <form action="/submit_form" method="post">
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="99" placeholder="Enter your age" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+
+    <input type="checkbox" id="subscribe" name="subscribe" checked>
+    <label for="subscribe">Subscribe to newsletter</label>
+
+    <fieldset>
+      <legend>Preferred Contact Method:</legend>
+      <input type="radio" id="contact-email" name="contact-method" value="email" checked>
+      <label for="contact-email">Email</label>
+
+      <input type="radio" id="contact-phone" name="contact-method" value="phone">
+      <label for="contact-phone">Phone</label>
+    </fieldset>
+
+    <label for="avatar">Upload Avatar:</label>
+    <input type="file" id="avatar" name="avatar" accept="image/*">
+
+    <button type="submit">Submit</button>
+
+  </form>
+
+</body>
+</html>
